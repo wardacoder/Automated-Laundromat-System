@@ -15,20 +15,19 @@ Future<void> main() async {
 
   // Conditional initialization for Firebase specifically tailored for web platforms.
   if (kIsWeb) {
-    await Firebase.initializeApp(
-      options: const FirebaseOptions(
-        apiKey: "AIzaSyDB_DuQh2xZ2Cl3oBOo0hL-kB-drVycsTI",
-        authDomain: "automatedlaundromatcoe420.firebaseapp.com",
-        databaseURL: "https://automatedlaundromatcoe420-default-rtdb.firebaseio.com",
-        projectId: "automatedlaundromatcoe420",
-        storageBucket: "automatedlaundromatcoe420.appspot.com",
-        messagingSenderId: "111710858133",
-        appId: "1:111710858133:web:017dd33edb41dcf87ce49c",
-        measurementId: "G-M0KPKYFFCM"
-       
-      ),
-    );
-  }
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: "APIKEY",
+      authDomain: "AUTHDOMAIN",
+      databaseURL: "DATABASEURL",
+      projectId: "PROJECTID",
+      storageBucket: "STORAGEBUCKET",
+      messagingSenderId: "MESSAGINGSENDERID",
+      appId: "APPID",
+      measurementId: "MEASUREMENTID",
+    ),
+  );
+}
 
   // General Firebase initialization for all platforms.
   await Firebase.initializeApp();
