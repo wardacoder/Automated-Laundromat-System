@@ -108,22 +108,11 @@ Automated-Laundromat-System/
 │   ├── FeedbackListPage.dart
 │   ├── FeedbackListAdminPage.dart
 │   ├── firebase_options.dart
-│   │
-│   ├── RegularPage/
-│   │   └── RegularPage.dart
-│   │
-│   ├── VisitorPage/
-│   │   └── VisitorPage.dart
-│   │
-│   ├── BookingPage/
-│   │   └── BookingPage.dart
-│   │
-│   ├── PaymentPage/
-│   │   └── PaymentPage.dart
-│   │
-│   └── widget/
-│       └── featurewidget.dart
-│
+│   ├── RegularPage.dart
+│   ├── VisitorPage.dart
+│   ├── BookingPage.dart
+│   ├── PaymentPage.dart
+│   └── featurewidget.dart
 │── docs/                         # Documentation & project artifacts
 │   ├── report/
 │   │   └── Automated_Laundromat_System.pdf   # Full project report
