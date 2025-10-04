@@ -1,106 +1,106 @@
 # Automated Laundromat System
 
-A smart laundromat application built with **Flutter** and **Firebase**. This project automates machine booking, payments, feedback, and loyalty rewards, while enabling smart monitoring of washers and dryers.   
-
-> This repository highlights the **Software Engineering process** completed as part of COE 420, covering requirements analysis, design, implementation, and testing.
+**Software Engineering SDLC project covering requirements (FRs & NFRs), design and analysis (UML diagrams: Use Case, Class, Domain Model, Sequence), full-stack implementation (Flutter frontend + Firebase database and hosting), testing (plans & cases), and deployment of a smart laundromat web system.**
 
 ---
 
-## 🧭 Project Overview
-- **Goal:** Automate a laundromat through a web/app interface with real-time status, booking, and payments.
-- **Scope:** Smart appliance monitoring (on/off, door lock, power usage), booking up to 2 cycles, coin + online payments, notifications, rewards, and admin-managed feedback.
-- **Stack:** Flutter (Dart) · Firebase (Auth, Realtime DB, Storage, Cloud Functions)
+## 📖 Project Overview
+The **Automated Laundromat System** is a web-based application that automates common laundromat operations while demonstrating a complete **Software Development Life Cycle (SDLC)** from requirements to deployment.
+
+**User roles:**
+- **Visitor:** one-time user who can browse and book machines.
+- **Client:** registered user with booking history and reward points.
+- **Admin:** manages machines, monitors usage & revenue, and responds to client feedback.
+
+**Key capabilities**   
+- Registration & login for clients; visitor can book as guest.
+- Machine **booking & scheduling** (up to two consecutive cycles).
+- **Online card** and **on-site coin** payment options.
+- **Reward points** program for frequent clients.
+- **Feedback module** with separate client and admin responses.
+- **Admin dashboard** for revenue reports and machine monitoring.
+- Real-time data storage and updates via **Firebase Realtime Database**.
+- **Deployed prototype** for demonstration using **Firebase Hosting**.
 
 ---
 
-### 1) Requirements Engineering
-- **Functional requirements**:
-  - Machine booking (washer/dryer) with up to 2 consecutive cycles
-  - Payments: coin interface and online (credit/debit)
-  - Payment confirmation required before machine use
-  - Database for machines, clients, and utility bills
-  - Reward system with points & discounts for loyal members
-  - Feedback system with admin responses
-  - Machine availability/status updates (sensors: on/off, door lock, power usage)
-  - Notifications for reservations & machine availability
-- **Non-functional requirements**:
-  - Role-based access (visitors, members, admins)
-  - Accessible via all browsers & devices
-  - Responsive UI
-  - High availability with uninterrupted internet
-  - Data retrieval within performance targets
-  - 24/7 service availability (except maintenance)
+## 📋 Requirements
+The project began with eliciting and documenting:
+- **Functional requirements:**  
+  booking and cancellation of machines, payments, reward accumulation, client feedback, admin response, etc.  
+- **Non-functional requirements:**  
+  system reliability, responsiveness, scalability, maintainability, and basic security constraints.
+- Defined **system scope, primary actors, and constraints**.
+
+(Full details are available in `docs/Final_Project_Report.pdf`.)
 
 ---
 
-### 2) Use Cases
-Documented and analyzed with **normal, alternative, and exception flows**:
-- Login / Logout
-- View Available Machines
-- Book a Machine (1–2 cycles)
-- Pay for Booked Machine(s)
-- Pay Online
-- Pay by Coin
-- Provide Feedback
-- Admin Respond to Feedback
+## 🏗️ Design & Analysis
+A set of **UML artifacts** was produced to move from requirements to system design:
+- **Use Case Diagram** – shows how Visitor, Client, and Admin interact with the system.
+- **Domain Model Diagram** – conceptual view of laundromat entities (User, Machine, Booking, Payment, Reward, Feedback).
+- **Class Diagram** – planned software-level structure of classes, attributes, and methods  
+  *(design reference — final Flutter widget structure differs, as is common in web/mobile apps)*.
+- **Sequence Diagrams** – depict runtime interaction flows for key scenarios (Booking, Payment, Scheduling).
+
+_All diagrams are in `docs/diagrams/`._
 
 ---
 
-### 3) System Design
-- **Class Diagram & Domain Model** describing relations between:
-  - `Machine` (Bookings, Usage_Statistics, Maintenance_Schedules, Revenue_Generated)
-  - `Client` (Client_ID, Client_Type, Name, Contact_Details, Reward_Points)
-  - `Utility_Bills` (Bill_Type, Amount, Billing_Date)
-- **Sequence Diagrams** for:
-  - Scheduling a booking
+## 💻 Full-Stack Implementation
+- **Frontend:**  
+  Built entirely in **Flutter Web** for a responsive interface.  
+  Main modules/pages:
+  - Visitor and Client: Login & Registration, Booking Page, Payment Page, Feedback Page, User Dashboard  
+  - Admin: Feedback Management
+
+- **Backend / Database:**  
+  Implemented using **Firebase Realtime Database**.  
+  Designed and maintained structured nodes for Users, Machines, Bookings, Payments, Rewards, and Feedback.  
+  Application logic updates database entries in real-time on booking, payment confirmation, feedback submission, and admin responses.
+
+- **Deployment:**  
+  Web app deployed using **Firebase Hosting** for live demonstration.
+
+---
+
+## 🧪 Testing
+- Designed a comprehensive **Testing Plan** and prepared **Test Cases** covering:
+  - User registration / login flow
+  - Machine booking & cancellation
   - Payment processing
+  - Reward points calculation
+  - Feedback submission and admin responses
+  - Data update checks in the database
+- Executed test cases and documented outcomes (see `docs/testing_plan.md` & `docs/testing_results.md`).
 
 ---
 
-### 4) Implementation
-Developed using **Flutter + Firebase**, with modular and role-based functionality.  
-Key modules include:
-- `main.dart` — App entry point, Firebase init, routing
-- `LoginPage.dart` & `RegistrationPage.dart` — Authentication and registration
-- `RegularPage.dart` / `VisitorPage.dart` — Role-specific dashboards
-- `BookingPage.dart` — Calendar/time selection, machine availability, cycle booking
-- `PaymentPage.dart` — Coin & online payment handling
-- `Feedback.dart` — Feedback submission
-- `FeedbackListPage.dart` & `FeedbackListAdminPage.dart` — Public reviews + admin responses
-- `DefaultFirebaseOptions.dart` — Platform Firebase configuration
+## 👩‍💻 My Contributions
+- Served as **Team Lead** – coordinated weekly deliverables and managed milestone tracking.
+- **Implemented the entire web application frontend** (all pages listed above).
+- **Designed and integrated the Firebase Realtime Database** including booking/payment/reward/feedback logic.
+- Set up **Firebase Hosting deployment**.
+- Led **requirements documentation** (FRs & NFRs) and **UML design** (Use Case, Domain Model, Class, Sequence).
+- Authored and executed **testing plans and cases**.
+- Co-authored the **41-page final project report**.
 
 ---
 
-### 5) Testing
-**Test Plan** included cases TC001–TC007:
-- TC001: Login validation  
-- TC002: Booking (success)  
-- TC003: Booking unavailable machine (error handling)  
-- TC004: Payment confirmation & revenue update  
-- TC005: Reward points allocation  
-- TC006: Submit feedback  
-- TC007: Admin-only responses to feedback  
-
-**Results:** Verified all cases; correct database updates for bookings, payments, rewards, and feedback access.
-
----
-
-### 6) Team & Methodology
-- **Led a team of 5** for this **course project (COE 420: Software Engineering)**  
-- Followed a **hybrid Scrum–Waterfall model**:  
-  - Scrum elements for iterative progress (sprint-style work, regular check-ins)  
-  - Waterfall structure for major deliverables and documentation milestones  
-- Deliverables were scheduled and completed in phases:  
-  - Requirements → Use Cases → Diagrams → Implementation → Testing → Final Report  
-- Ensured collaboration, coordination, and timely completion of project milestones
-
----
-
-## 📂 Repository Structure 
-
-```text
+## 📂 Repository Structure
+```
 Automated-Laundromat-System/
-│── lib/                          # Main Flutter source code
+│
+├── docs/
+│   ├── Final_Project_Report.pdf 
+│   └── diagrams/
+│       ├── use_case_diagram.png
+│       ├── domain_model_diagram.png
+│       ├── class_diagram.png
+│       ├── sequence_diagram_booking.png
+│       └── sequence_diagram_payment.png
+├── lib/
 │   ├── main.dart
 │   ├── LoginPage.dart
 │   ├── RegistrationPage.dart
@@ -113,27 +113,30 @@ Automated-Laundromat-System/
 │   ├── BookingPage.dart
 │   ├── PaymentPage.dart
 │   └── featurewidget.dart
-│── docs/                         # Documentation & project artifacts
-│   ├── report/
-│   │   └── Automated_Laundromat_System.pdf   # Full project report
-│   ├── diagrams/                 # Visual models
-│       ├── use_case_diagram.png
-│       ├── class_diagram.png
-│       ├── domain_model.png
-│       ├── sequence_scheduling.png
-│       └── sequence_payment.png
 │
-└── README.md                     # Project showcase
+├── README.md              
+└── LICENSE                       
 ```
 
 ---
 
-## 📊 Project Highlights
-- Applied **full Software Development Life Cycle (SDLC)**:
-  - Requirements gathering
-  - Use case modeling
-  - System & database design
-  - Implementation in Flutter + Firebase
-  - Testing with structured cases & results
-- Delivered a **complete prototype** simulating real-world laundromat automation
-- Emphasis on **structured engineering practices, documentation, and validation**
+## 🚀 Tech Stack
+- **Process:** Semester-long SDLC with iterative weekly deliverables 
+- **Modeling:** UML (Use Case, Class, Domain Model, Sequence)  
+- **Frontend:** Flutter Web  
+- **Backend:** Firebase Realtime Database
+- **Testing:** Manual test plans and cases  
+- **Deployment:** Firebase Hosting  
+
+---
+
+## 📄 Documentation & Additional Details
+
+For complete project documentation, including:
+- All **SDLC deliverables** (requirements, design, implementation, and testing phases)
+- Detailed **UML diagrams** (Use Case, Class, Domain Model, Sequence)
+- Full **database structure** and **system workflows**
+- And **screenshots** of the deployed web application interface
+
+please refer to the [Final Project Report](docs/Final_Project_Report.pdf).
+
