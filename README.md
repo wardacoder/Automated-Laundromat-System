@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 Project Overview
+## Project Overview
 The **Automated Laundromat System** is a web-based application that automates common laundromat operations while demonstrating a complete **Software Development Life Cycle (SDLC)** from requirements to deployment.
 
 **User roles:**
@@ -24,7 +24,7 @@ The **Automated Laundromat System** is a web-based application that automates co
 
 ---
 
-## 📋 Requirements
+## Requirements
 The project began with eliciting and documenting:
 - **Functional requirements:**  
   booking and cancellation of machines, payments, reward accumulation, client feedback, admin response, etc.  
@@ -36,7 +36,7 @@ Full details are available in [Final Project Report](docs/Final_Project_Report.p
 
 ---
 
-## 🏗️ Design & Analysis
+## Design & Analysis
 A set of **UML artifacts** was produced to move from requirements to system design:
 - **Use Case Diagram** – shows how Visitor, Client, and Admin interact with the system.
 - **Domain Model Diagram** – conceptual view of laundromat entities (User, Machine, Booking, Payment, Reward, Feedback).
@@ -48,7 +48,7 @@ All diagrams are in [Diagrams](docs/diagrams).
 
 ---
 
-## 💻 Full-Stack Implementation
+## Full-Stack Implementation
 - **Frontend:**  
   Built entirely in **Flutter Web** for a responsive interface.  
   Main modules/pages:
@@ -60,12 +60,9 @@ All diagrams are in [Diagrams](docs/diagrams).
   Designed and maintained structured nodes for Users, Machines, Bookings, Payments, Rewards, and Feedback.  
   Application logic updates database entries in real-time on booking, payment confirmation, feedback submission, and admin responses.
 
-- **Deployment:**  
-  Web app deployed using **Firebase Hosting** for live demonstration.
-
 ---
 
-## 🧪 Testing
+## Testing
 - Designed a comprehensive **Testing Plan** and prepared **Test Cases** covering:
   - User registration / login flow
   - Machine booking
@@ -77,7 +74,12 @@ All diagrams are in [Diagrams](docs/diagrams).
 
 ---
 
-## 👩‍💻 My Contributions
+## Deployment:
+  Web app deployed using **Firebase Hosting** as a part of demonstration.
+
+---
+
+## My Contributions
 - Served as **Team Lead** – coordinated weekly deliverables and managed milestone tracking.
 - **Implemented the entire web application frontend** (all pages listed above).
 - **Designed and integrated the Firebase Realtime Database** including booking/payment/reward/feedback logic.
@@ -88,7 +90,7 @@ All diagrams are in [Diagrams](docs/diagrams).
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 ```
 Automated-Laundromat-System/
 │
@@ -120,7 +122,7 @@ Automated-Laundromat-System/
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 - **Process:** Semester-long SDLC with iterative weekly deliverables 
 - **Modeling:** UML (Use Case, Class, Domain Model, Sequence)  
 - **Frontend:** Flutter Web  
@@ -130,7 +132,7 @@ Automated-Laundromat-System/
 
 ---
 
-## 📄 Documentation & Additional Details
+## Documentation & Additional Details
 
 For complete project documentation, including:
 - All **SDLC deliverables** (requirements, design, implementation, and testing phases)
