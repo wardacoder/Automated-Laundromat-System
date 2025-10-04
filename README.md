@@ -115,7 +115,6 @@ Automated-Laundromat-System/
 │   ├── BookingPage.dart
 │   ├── PaymentPage.dart
 │   └── featurewidget.dart
-│
 ├── README.md              
 └── LICENSE                       
 ```
