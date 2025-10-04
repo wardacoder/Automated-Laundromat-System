@@ -32,7 +32,7 @@ The project began with eliciting and documenting:
   system reliability, responsiveness, scalability, maintainability, and basic security constraints.
 - Defined **system scope, primary actors, and constraints**.
 
-(Full details are available in `docs/Final_Project_Report.pdf`.)
+Full details are available in [Final Project Report](docs/Final_Project_Report.pdf).
 
 ---
 
@@ -44,7 +44,7 @@ A set of **UML artifacts** was produced to move from requirements to system desi
   *(design reference — final Flutter widget structure differs, as is common in web/mobile apps)*.
 - **Sequence Diagrams** – depict runtime interaction flows for key scenarios (Booking, Payment, Scheduling).
 
-_All diagrams are in `docs/diagrams/`._
+All diagrams are in [Diagrams](docs/diagrams).
 
 ---
 
@@ -68,12 +68,12 @@ _All diagrams are in `docs/diagrams/`._
 ## 🧪 Testing
 - Designed a comprehensive **Testing Plan** and prepared **Test Cases** covering:
   - User registration / login flow
-  - Machine booking & cancellation
+  - Machine booking
   - Payment processing
   - Reward points calculation
-  - Feedback submission and admin responses
+  - Client feedback submission
+  - Admin response submission
   - Data update checks in the database
-- Executed test cases and documented outcomes (see `docs/testing_plan.md` & `docs/testing_results.md`).
 
 ---
 
