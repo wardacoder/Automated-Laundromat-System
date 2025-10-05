@@ -50,7 +50,7 @@ All diagrams are in [Diagrams](docs/diagrams).
 
 ## Full-Stack Implementation
 - **Frontend:**  
-  Built entirely in **Flutter Web** for a responsive interface.  
+  Built entirely in **Flutter** for a responsive interface.  
   Main modules/pages:
   - Visitor and Client: Login & Registration, Booking Page, Payment Page, Feedback Page, User Dashboard  
   - Admin: Feedback Management
